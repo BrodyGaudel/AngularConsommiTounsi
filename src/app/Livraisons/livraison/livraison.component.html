@@ -1,0 +1,29 @@
+<div class="container">
+  <h3>Liste des livraisons</h3>
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <div>
+        <a href="http://localhost:8080/SpringMVC/servlet/livraison/listpdf">Generation PDF</a>
+      </div>
+      <table class="table table-striped">
+        <tr> <th>N°</th><th>Frais de livraison</th> <th>Destination</th> <th>MATRICULE LIVREUR</th></tr>
+        <tbody *ngFor="let livraison of livr">
+        <tr>
+          <td>{{livraison.idLivraison}}</td>
+          <td>{{livraison.fraisLivraison}}</td>
+          <td>{{livraison.destination}}</td>
+          <td>{{livraison.livreurMatricule}}</td>
+          <td><a class="btn btn-danger" (click)="supprimerLivraison(livraison.idLivraison)">Supprimer</a></td>
+          <td><a class="btn btn-success" [routerLink]="['/UpdateLivraison',livraison.idLivraison]">Modifier</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <a class="btn btn-success" [routerLink]="['/AddLivraison']">Nouvelle Livraison</a>
+    </div>
+  </div>
+</div>
+
+
+

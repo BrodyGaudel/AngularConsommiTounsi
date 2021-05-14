@@ -1,0 +1,47 @@
+<div class="container">
+  <div>
+    <h2>Ajouter un livreur</h2>
+  </div>
+  <form >
+    <div hidden class="col-sm-2 col-md-2 col-lg-2">
+      <label >ID Livreur</label>
+      <input type="text" [(ngModel)]="newLivreur.idLivreur"
+             name="idliv" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+      <label >NOM</label>
+      <input type="text" [(ngModel)]= "newLivreur.nom"
+             name="lastname" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label >PRENOM</label>
+      <input type="text" [(ngModel)]= "newLivreur.prenom"
+             name="firstname" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label >TRANSPORT</label>
+      <input type="text" [(ngModel)]= "newLivreur.moyenTransport"
+             name="transport" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label >DISPONIBILITE</label>
+      <input type="text" [(ngModel)]= "newLivreur.disponibility"
+             name="disponibilite" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+      <label >SALAIRE</label>
+      <input type="number" [(ngModel)]= "newLivreur.salaire"
+             name="salaire" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+      <label >CIN/PASSPORT</label>
+      <input type="text" [(ngModel)]= "newLivreur.cin"
+             name="cin" class="form-control">
+    </div>
+    <div class="mt-2">
+      <button type="submit" (click)="addLivreur()" class="btn btn-success">Ajouter</button>
+    </div>
+  </form>
+</div>
+
+

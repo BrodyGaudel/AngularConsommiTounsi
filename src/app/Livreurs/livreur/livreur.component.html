@@ -1,0 +1,26 @@
+<div class="container">
+  <h3>Liste des livreurs</h3>
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <table class="table table-striped">
+        <tr> <th>N°</th><th>NOM</th> <th>PRENOM</th> <th>TRANSPORT</th><th>DISPONIBILITE</th><th>SALAIRE</th><th>CIN</th></tr>
+        <tbody *ngFor="let livreur of liv">
+        <tr>
+          <td>{{livreur.matricule}}</td>
+          <td>{{livreur.nom}}</td>
+          <td>{{livreur.prenom}}</td>
+          <td>{{livreur.moyenTransport}}</td>
+          <td>{{livreur.disponibility}}</td>
+          <td>{{livreur.salaire}}</td>
+          <td>{{livreur.cin}}</td>
+          <td><a class="btn btn-danger" (click)="supprimerLivreur(livreur.matricule)">Supprimer</a></td>
+          <td><a class="btn btn-success" [routerLink]="['/UpdateLivreur',livreur.matricule]">Modifier</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <a class="btn btn-success" [routerLink]="['/AddLivreur']">Nouveau Livreur</a>
+    </div>
+  </div>
+</div>

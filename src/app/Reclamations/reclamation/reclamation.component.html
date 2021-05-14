@@ -1,0 +1,24 @@
+<div class="container">
+  <h3>Liste des réclamations</h3>
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <table class="table table-striped">
+        <tr> <th>N°</th><th>Type</th><th>Descriptions</th><th>Reponse</th></tr>
+        <tbody *ngFor="let reclamation of reclam">
+        <tr>
+          <td>{{reclamation.idReclamation}}</td>
+          <td>{{reclamation.type}}</td>
+          <td>{{reclamation.description}}</td>
+          <td>{{reclamation.reponse}}</td>
+          <td><a class="btn btn-danger" (click)="supprimerReclamation(reclamation.idReclamation)">Supprimer</a></td>
+          <td><a class="btn btn-success" [routerLink]="['/updateReclamation',reclamation.idReclamation]">Répondre</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <a class="btn btn-success" [routerLink]="['/addReclamation']">Nouvelle reclamation</a>
+    </div>
+  </div>
+</div>
+

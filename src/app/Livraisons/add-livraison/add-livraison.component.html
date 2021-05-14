@@ -1,0 +1,28 @@
+<div class="container">
+  <div>
+    <h2>Ajouter une livraison</h2>
+  </div>
+  <form >
+    <div hidden class="col-sm-2 col-md-2 col-lg-2">
+      <label >ID Livraison</label>
+      <input type="number" [(ngModel)]="newLivraison.idLivraison"
+             name="idLivraison" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+      <label >Frais de livraison</label>
+      <input type="number" [(ngModel)]= "newLivraison.fraisLivraison"
+             name="fraisLivraison" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label >Destination</label>
+      <input type="text" [(ngModel)]= "newLivraison.destination"
+             name="destination" class="form-control">
+    </div>
+    <div class="mt-2">
+      <button type="submit" (click)="addLivraison()" class="btn btn-success">Ajouter</button>
+    </div>
+  </form>
+</div>
+
+
+
